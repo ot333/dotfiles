@@ -7,6 +7,7 @@ cmatrix
 dolphin
 dunst
 efibootmgr
+eza
 fastfetch
 firefox
 git
