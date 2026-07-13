@@ -1,0 +1,16 @@
+#kitty configuration
+
+shell                   zsh
+confirm_os_window_close 0
+startup_session         startup.conf
+
+remember_window_size    no
+sync_to_monitor         no
+
+window_padding_width    10
+background_opacity      0.80
+
+# BEGIN_KITTY_THEME
+# Base2Tone Cave Dark
+include current-theme.conf
+# END_KITTY_THEME
