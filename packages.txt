@@ -32,7 +32,6 @@ mesa-utils
 mkinitcpio
 mupdf
 nano
-neofetch
 networkmanager
 numlockx
 nvidia-open-dkms
@@ -53,8 +52,6 @@ waybar
 wireplumber
 wl-clipboard
 xdg-desktop-portal-hyprland
-yay-bin
-yay-bin-debug
 yazi
 zram-generator
 zsh

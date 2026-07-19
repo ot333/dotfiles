@@ -31,7 +31,7 @@ hl.monitor({
     output   = "",
     mode     = "preferred",
     position = "auto",
-    scale    = "2",
+    scale    = "1",
 })
 
 ---------------------
@@ -91,13 +91,13 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.config({
     general = {
         gaps_in  = 5,
-        gaps_out = 20,
+        gaps_out = 10,
 
         border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgba(d6b4b4ee)", "rgba(709bbdee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
+            active_border   = { colors = {"rgba(d1918fff)", "rgba(dee0efff)"}, angle = 45 },
+            inactive_border = { colors = {"rgba(709bbdff)", "rgba(dee0efff)"}, angle = 45 },
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -115,7 +115,7 @@ hl.config({
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 0.8,
-        inactive_opacity = 0.7,
+        inactive_opacity = 0.6,
 
         shadow = {
             enabled      = true,
@@ -126,10 +126,10 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 7,
+            size      = 5,
             passes    = 2,
             vibrancy  = 0.1,
-	    noise     = 0.1,
+	    noise     = 0.0,
         },
     },
 
@@ -211,8 +211,8 @@ hl.config({
 
 hl.config({
     misc = {
-        force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
+        disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
     },
 })
 
