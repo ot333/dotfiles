@@ -1,3 +1,14 @@
+basedpyright
+cmatrix-git
+cmatrix-git-debug
+minecraft-launcher
+minecraft-launcher-debug
 neofetch
+pipes.sh
+pyrefly
+pyrefly-debug
+python-minny
+python-types-pyserial
+thonny
 yay-bin
 yay-bin-debug
