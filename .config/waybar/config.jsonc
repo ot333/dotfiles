@@ -4,14 +4,15 @@
     "margin-top": 10,
 
     // "width": 1280, // Waybar width
-    "spacing": 10, // Gaps between modules (4px)
+    "spacing": 12, // Gaps between modules (4px)
 
     // order of the modules
     "modules-left": [
         "cpu",
 	"memory",
-	"network"
-        //"custom/media"
+	"network",
+	"bluetooth",
+        "custom/media"
     ],
     "modules-center": [
         "clock"
@@ -54,6 +55,12 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+
+    "bluetooth": {
+	"format": "",
+	"format-connected": "{device_alias} ",
+	"on-click": "blueman-manager"
     },
 
     ////////////////////////
