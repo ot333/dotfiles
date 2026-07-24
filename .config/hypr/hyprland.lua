@@ -40,7 +40,7 @@ hl.monitor({
 
 local terminal    = "kitty"
 local fileManager = "kitty -e yazi"
-local menu        = "rofi -show drun"
+local menu        = "/home/oat/.config/rofi/launchers/type-1/launcher.sh"
 local browser	  = "firefox"
 local task        = "kitty -e htop"
 
