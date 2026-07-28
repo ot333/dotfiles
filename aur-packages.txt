@@ -1,6 +1,7 @@
 basedpyright
 cmatrix-git
 cmatrix-git-debug
+heroic-games-launcher-bin
 minecraft-launcher
 minecraft-launcher-debug
 neofetch

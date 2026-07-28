@@ -18,12 +18,15 @@ git
 greetd
 grub
 gst-plugin-pipewire
+heroic-games-launcher-bin
 htop
 hyprland
 hyprlauncher
 hyprlock
 hyprpaper
 hyprpolkitagent
+imagemagick
+inkscape
 intel-ucode
 iwd
 jre-openjdk
@@ -43,6 +46,7 @@ networkmanager
 numlockx
 nvidia-open-dkms
 nvidia-utils
+nwg-look
 openssh
 os-prober
 pavucontrol
