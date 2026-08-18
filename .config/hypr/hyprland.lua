@@ -366,3 +366,10 @@ hl.window_rule({
     float = true,
 })
 
+hl.window_rule({
+    name = "opaque-minecraft",
+    match = { 
+        class = "^(Minecraft.*)$" 
+    },
+    opaque = true
+})
