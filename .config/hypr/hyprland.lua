@@ -42,7 +42,7 @@ local terminal    = "kitty"
 local fileManager = "kitty -e yazi"
 local menu        = "/home/oat/.config/rofi/launchers/type-1/launcher.sh"
 local browser	  = "firefox"
-local task        = "kitty -e htop"
+local task        = "kitty -e btop"
 
 -------------------
 ---- AUTOSTART ----
@@ -51,6 +51,7 @@ local task        = "kitty -e htop"
 hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar & awww-daemon")
 	hl.exec_cmd("[workspace special silent] firefox")
+--	hl.exec_cmd("batsignal -b -c 85")
 end)
 
 
