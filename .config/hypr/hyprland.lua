@@ -368,8 +368,14 @@ hl.window_rule({
 
 hl.window_rule({
     name = "opaque-minecraft",
-    match = { 
-        class = "^(Minecraft.*)$" 
-    },
+    match = { class = "^(Minecraft.*)$" },
     opaque = true
+})
+
+hl.window_rule({
+    name = "blueman-float",
+    match = { class = "blueman-manager" },
+    float = true,
+    size = {528, 280},
+    move = {328, 11}
 })
