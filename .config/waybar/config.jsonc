@@ -18,8 +18,8 @@
         "clock"
     ],
     "modules-right": [
-        "pulseaudio",
-        "backlight",
+        "group/audio",
+	"group/brightness",
         "battery",
         "custom/power"
     ],
@@ -67,12 +67,25 @@
     /////////RIGHT//////////
     ////////////////////////
 
+    "group/audio": {
+            "orientation": "horizontal",
+            "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false, // Set to true if bar is on the left side
+            ////lick-to-reveal": true            // Makes it open on click instead of hover
+        },
+        "modules": [
+            "pulseaudio",          // The main visible module
+            "pulseaudio/slider"    // The hidden module revealed on click
+        ]
+    },
+
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": " {icon}",
-        //*"format-muted": "",
+        "format-muted": "",
         //"format-source": "{volume}%",//  ",
         //"format-source-muted": "",
         "format-icons": {
@@ -87,11 +100,36 @@
         "on-click": "pavucontrol"
     },
 
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+
+    "group/brightness": {
+            "orientation": "horizontal",
+            "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false, // Set to true if bar is on the left side
+            //"click-to-reveal": true            // Makes it open on click instead of hover
+        },
+        "modules": [
+            "backlight",          // The main visible module
+            "backlight/slider"    // The hidden module revealed on click
+        ]
+    },
+
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
+
+    "backlight/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+
 
     "battery": {
         "states": {
