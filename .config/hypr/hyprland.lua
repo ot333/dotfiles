@@ -377,5 +377,5 @@ hl.window_rule({
     match = { class = "blueman-manager" },
     float = true,
     size = {528, 280},
-    move = {328, 11}
+    move = {300, 10}
 })

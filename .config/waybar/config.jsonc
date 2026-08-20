@@ -15,12 +15,13 @@
         "custom/media"
     ],
     "modules-center": [
-        "clock"
+	"hyprland/workspaces"
     ],
     "modules-right": [
         "group/audio",
 	"group/brightness",
         "battery",
+	"clock",
         "custom/power"
     ],
 
@@ -33,6 +34,25 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "all-outputs": true,
+        "sort-by-number": true,
+	"persistent-workspaces": {
+	    "*": [1, 2, 3, 4, 5]
+	},
+	"format-icons": {
+            
+	    "empty": "",
+//	    "persistent": ""
+	    "occupied": "",
+	    "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+// 
 
     ////////////////////////
     //////////LEFT//////////
