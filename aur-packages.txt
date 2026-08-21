@@ -1,4 +1,6 @@
 basedpyright
+cliamp
+cliamp-debug
 cmatrix-git
 cmatrix-git-debug
 heroic-games-launcher-bin

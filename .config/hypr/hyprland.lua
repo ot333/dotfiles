@@ -43,6 +43,7 @@ local fileManager = "kitty -e yazi"
 local menu        = "/home/oat/.config/rofi/launchers/type-1/launcher.sh"
 local browser	  = "firefox"
 local task        = "kitty -e btop"
+local amp	  = "kitty -e cliamp"
 
 -------------------
 ---- AUTOSTART ----
@@ -274,6 +275,32 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + ALT_L", hl.dsp.exec_cmd(task))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(amp))
+
+-- Move windows
+hl.bind(mainMod .. " + A", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + S", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + W", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + D", hl.dsp.window.move({ direction = "right" }))
+
+-- Switch to a submap called `resize`.
+hl.bind("ALT + R", hl.dsp.submap("resize"))
+
+-- Start a submap called "resize".
+hl.define_submap("resize", function()
+
+    -- Set repeating binds for resizing the active window.
+    hl.bind("right", hl.dsp.window.resize({ x = 10, y = 0, relative = true}), { repeating = true })
+    hl.bind("left", hl.dsp.window.resize({ x = -10, y = 0, relative = true}), { repeating = true })
+    hl.bind("up", hl.dsp.window.resize({ x = 0, y = -10, relative = true}), { repeating = true })
+    hl.bind("down", hl.dsp.window.resize({ x = 0, y = 10, relative = true}), { repeating = true })
+
+    -- Use `reset` to go back to the global submap
+    hl.bind("escape", hl.dsp.submap("reset"))
+
+end)
+
+-- Keybinds further down will be global again...
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -290,8 +317,8 @@ for i = 1, 10 do
 end
 
 -- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+--hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
+--hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
