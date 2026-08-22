@@ -9,6 +9,7 @@ bluez
 bluez-utils
 brightnessctl
 btop
+cliamp
 cmatrix-git
 dolphin
 dunst
@@ -61,6 +62,7 @@ pipewire-pulse
 polkit-gnome
 polkit-kde-agent
 power-profiles-daemon
+qt6-wayland
 rofi
 rpi-imager
 sassc
