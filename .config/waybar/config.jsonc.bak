@@ -11,16 +11,17 @@
         "cpu",
 	"memory",
 	"network",
-	"bluetooth",
-        "custom/media"
+	"bluetooth"
     ],
     "modules-center": [
-        "clock"
+	"hyprland/workspaces",
+	"custom/cliamp"
     ],
     "modules-right": [
         "group/audio",
 	"group/brightness",
         "battery",
+	"clock",
         "custom/power"
     ],
 
@@ -33,6 +34,25 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "all-outputs": true,
+        "sort-by-number": true,
+	"persistent-workspaces": {
+	    "*": [1, 2, 3, 4, 5]
+	},
+	"format-icons": {
+            
+	    "empty": "",
+//	    "persistent": ""
+	    "occupied": "",
+	    "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+// 
 
     ////////////////////////
     //////////LEFT//////////
@@ -66,6 +86,25 @@
     ////////////////////////
     /////////RIGHT//////////
     ////////////////////////
+
+//    "custom/cliamp": {
+//        "exec": "cliamp status --json | jq -r 'if .state == \"playing\" then \"\" + (.track.title // \"\") else \"Paused\" end'",        
+//        "interval": 2,
+//        "on-click": "cliamp toggle",
+//        "on-click-right": "cliamp next",
+//        "on-scroll-up": "cliamp volume +3",
+//        "on-scroll-down": "cliamp volume -3"
+//    },
+
+    /// block style  ///
+    "custom/cliamp": {
+        "exec": "/home/oat/.config/waybar/cliamp-eq.sh",
+        "return-type": "json",
+        "on-click": "cliamp toggle",
+        "on-click-right": "cliamp next",
+        "on-scroll-up": "cliamp volume +3",
+        "on-scroll-down": "cliamp volume -3"
+    },
 
     "group/audio": {
             "orientation": "horizontal",
