@@ -110,6 +110,12 @@ button:hover {
     font-weight: bold;
     transition: all 0.3s ease;
 }
+#custom-cliamp.hidden {
+    padding: 0;
+    margin: 0;
+    border: 0px solid transparent;
+    background-color: transparent;
+}
 
 /****************************/
 /************LEFT************/

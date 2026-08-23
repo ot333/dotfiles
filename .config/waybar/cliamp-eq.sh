@@ -4,20 +4,24 @@ frames=("▅▃▆█" "▃▆█▅" "▆█▅▃" "█▅▃▆")
 i=0
 
 while true; do
-    STATUS_JSON=$(cliamp status --json 2>/dev/null)
-    STATE=$(echo "$STATUS_JSON" | jq -r '.state' 2>/dev/null)
-    TITLE=$(echo "$STATUS_JSON" | jq -r '.track.title // ""' 2>/dev/null)
+    # Check if cliamp is running at all
+    if pgrep -x "cliamp" > /dev/null; then
+        STATUS_JSON=$(cliamp status --json 2>/dev/null)
+        STATE=$(echo "$STATUS_JSON" | jq -r '.state' 2>/dev/null)
+        TITLE=$(echo "$STATUS_JSON" | jq -r '.track.title // ""' 2>/dev/null)
 
-    if [ "$STATE" = "playing" ]; then
-        OUTPUT="${frames[$i]}  $TITLE"
-        i=$(( (i + 1) % 4 ))
+        if [ "$STATE" = "playing" ]; then
+            OUTPUT="${frames[$i]}  $TITLE"
+            i=$(( (i + 1) % 4 ))
+        else
+            OUTPUT="   ▶   "
+        fi
+
+        printf '{"text": "%s"}\n' "$OUTPUT"
     else
-        OUTPUT="   ▶   "
+        # Output nothing and clear text so Waybar hides the module
+        printf '{"text": ""}\n'
     fi
-    
-    # Format directly as JSON for Waybar stream consumption
-    printf '{"text": "%s"}\n' "$OUTPUT"
-    
+
     sleep 0.2
 done
-
