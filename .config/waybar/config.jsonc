@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
     "height": 25, // Waybar height (to be removed for auto height)
-    "margin-top": 10,
+    "margin-top": 8,
 
     // "width": 1280, // Waybar width
     "spacing": 12, // Gaps between modules (4px)
