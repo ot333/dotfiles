@@ -254,7 +254,7 @@ button:hover {
     color: #ffffff;
 }
 #pulseaudio.muted {
-    background-color: #dee0ef;
+    background-color: #90b1b1;
     color: #2a5c45;
 }
 #pulseaudio-slider {
