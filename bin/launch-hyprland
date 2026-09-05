@@ -1,0 +1,14 @@
+#!/bin/bash
+
+## hyprland start-up
+
+clear
+
+## print splash
+~/.local/bin/splash
+sleep 2
+
+## hyprland
+exec start-hyprland >/dev/null 2>&1
+
+
