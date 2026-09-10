@@ -1,3 +1,4 @@
+7zip
 alacritty
 amd-ucode
 awww
@@ -11,11 +12,13 @@ brightnessctl
 btop
 cliamp
 cmatrix-git
+docker
 dolphin
 dunst
 efibootmgr
 eza
 fastfetch
+fetch-git
 firefox
 git
 greetd
@@ -32,6 +35,7 @@ imagemagick
 inkscape
 intel-ucode
 iwd
+jq
 jre-openjdk
 kitty
 libpulse
@@ -75,6 +79,7 @@ swaync
 thonny
 unzip
 vim
+vulkan-tools
 waybar
 wireplumber
 wl-clipboard

@@ -3,6 +3,8 @@ cliamp
 cliamp-debug
 cmatrix-git
 cmatrix-git-debug
+fetch-git
+fetch-git-debug
 heroic-games-launcher-bin
 minecraft-launcher
 minecraft-launcher-debug
